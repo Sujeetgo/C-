@@ -1,0 +1,33 @@
+//First Method -> 2 pointer Method
+string reverseWord(string str){
+    
+  //Your code here
+  int s = 0;
+  int e = str.size() - 1;
+  while(s<=e){
+      swap(str[s], str[e]);
+      s++;
+      e--;
+  }
+  return str;
+}
+
+// Second method
+string reverseWord(string str){
+    
+  //Your code here
+  string rev_str;
+  for(int i = str.size()-1; i >=0; i--){
+    rev_str.push_back(str[i]);
+    
+  }
+  return rev_str;
+}
+
+// Third method using STl
+string reverseWord(string str){
+    
+  //Your code here
+  reverse(str.begin(), str.end());
+  return str;
+}
